@@ -34,10 +34,10 @@ public class TestDeposit {
 	public void test1949To1989() {
 		// 從1949存錢到昭和64, 存198178
 		// 利率都是3%
-		double expected = 198178 * Math.pow(1 + 0.03, 40));
+		double expected = (198178 * Math.pow(1 + 0.03, 40));
 
 		when(userA.depositAmount()).thenReturn(198178);
-		when(userA.depositInterest(anyInt)).thenReturn(0.03);
+		when(userA.depositInterest(anyInt())).thenReturn(0.03);
 		//when(userA.depositInterest(leq(2000))).thenReturn(0.02);
 		when(userA.expireEra()).thenReturn("昭和");
 		when(userA.expireYear()).thenReturn(64);
